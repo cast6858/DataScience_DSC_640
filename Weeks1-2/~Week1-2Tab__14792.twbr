@@ -1,0 +1,599 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0624.2136                               -->
+<workbook original-version='18.1' source-build='2022.2.0 (20222.22.0624.2136)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-off' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource caption='mcu_box_office' inline='true' name='federated.00pf23511qzf3e14x341b0v6p5rv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mcu_box_office' name='textscan.13t75i3185ntp81cyqpdu1bhxgxx'>
+            <connection class='textscan' directory='C:/DataScience_DSC_640/Weeks1-2' filename='mcu_box_office.csv' password='' port='0' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.13t75i3185ntp81cyqpdu1bhxgxx' name='mcu_box_office.csv' table='[mcu_box_office#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='movie_title' ordinal='0' />
+            <column datatype='string' name='mcu_phase' ordinal='1' />
+            <column datatype='date' name='release_date' ordinal='2' />
+            <column datatype='integer' name='tomato_meter' ordinal='3' />
+            <column datatype='integer' name='audience_score' ordinal='4' />
+            <column datatype='integer' name='movie_duration' ordinal='5' />
+            <column datatype='integer' name='production_budget' ordinal='6' />
+            <column datatype='integer' name='opening_weekend' ordinal='7' />
+            <column datatype='integer' name='domestic_box_office' ordinal='8' />
+            <column datatype='integer' name='worldwide_box_office' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.13t75i3185ntp81cyqpdu1bhxgxx' name='mcu_box_office.csv' table='[mcu_box_office#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='movie_title' ordinal='0' />
+            <column datatype='string' name='mcu_phase' ordinal='1' />
+            <column datatype='date' name='release_date' ordinal='2' />
+            <column datatype='integer' name='tomato_meter' ordinal='3' />
+            <column datatype='integer' name='audience_score' ordinal='4' />
+            <column datatype='integer' name='movie_duration' ordinal='5' />
+            <column datatype='integer' name='production_budget' ordinal='6' />
+            <column datatype='integer' name='opening_weekend' ordinal='7' />
+            <column datatype='integer' name='domestic_box_office' ordinal='8' />
+            <column datatype='integer' name='worldwide_box_office' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>movie_title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[movie_title]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>movie_title</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mcu_phase</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mcu_phase]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>mcu_phase</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[release_date]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>release_date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tomato_meter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tomato_meter]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>tomato_meter</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>audience_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[audience_score]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>audience_score</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>movie_duration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[movie_duration]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>movie_duration</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>production_budget</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[production_budget]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>production_budget</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>opening_weekend</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[opening_weekend]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>opening_weekend</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>domestic_box_office</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[domestic_box_office]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>domestic_box_office</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>worldwide_box_office</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[worldwide_box_office]</local-name>
+            <parent-name>[mcu_box_office.csv]</parent-name>
+            <remote-alias>worldwide_box_office</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='mcu_box_office.csv' datatype='table' name='[__tableau_internal_object_id__].[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]' role='measure' type='quantitative' />
+      <column caption='Audience Score' datatype='integer' name='[audience_score]' role='measure' type='quantitative' />
+      <column caption='Domestic Box Office' datatype='integer' name='[domestic_box_office]' role='measure' type='quantitative' />
+      <column caption='Mcu Phase' datatype='string' default-role='measure' default-type='quantitative' name='[mcu_phase]' role='dimension' type='nominal' />
+      <column caption='Movie Duration' datatype='integer' name='[movie_duration]' role='measure' type='quantitative' />
+      <column caption='Movie Title' datatype='string' name='[movie_title]' role='dimension' type='nominal' />
+      <column caption='Opening Weekend' datatype='integer' name='[opening_weekend]' role='measure' type='quantitative' />
+      <column caption='Production Budget' datatype='integer' name='[production_budget]' role='measure' type='quantitative' />
+      <column caption='Release Date' datatype='date' name='[release_date]' role='dimension' type='ordinal' />
+      <column caption='Tomato Meter' datatype='integer' name='[tomato_meter]' role='measure' type='quantitative' />
+      <column caption='Worldwide Box Office' datatype='integer' name='[worldwide_box_office]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tomato_meter]' derivation='Avg' name='[avg:tomato_meter:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mcu_phase]' derivation='None' name='[none:mcu_phase:nk]' pivot='key' type='nominal' />
+      <column-instance column='[audience_score]' derivation='Sum' name='[sum:audience_score:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[domestic_box_office]' derivation='Sum' name='[sum:domestic_box_office:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mcu_phase]' derivation='Sum' name='[sum:mcu_phase:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[movie_duration]' derivation='Sum' name='[sum:movie_duration:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[opening_weekend]' derivation='Sum' name='[sum:opening_weekend:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[production_budget]' derivation='Sum' name='[sum:production_budget:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tomato_meter]' derivation='Sum' name='[sum:tomato_meter:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[worldwide_box_office]' derivation='Sum' name='[sum:worldwide_box_office:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='1' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:mcu_phase:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%many-values%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:worldwide_box_office:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:mcu_phase:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[__tableau_internal_object_id__].[cnt:mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC:qk]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[avg:tomato_meter:qk]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:tomato_meter:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:opening_weekend:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:audience_score:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:movie_duration:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:domestic_box_office:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:production_budget:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='mcu_box_office.csv' id='mcu_box_office.csv_19EC8F1D4DA04F208079B652ECF6ECAC'>
+            <properties context=''>
+              <relation connection='textscan.13t75i3185ntp81cyqpdu1bhxgxx' name='mcu_box_office.csv' table='[mcu_box_office#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='movie_title' ordinal='0' />
+                  <column datatype='string' name='mcu_phase' ordinal='1' />
+                  <column datatype='date' name='release_date' ordinal='2' />
+                  <column datatype='integer' name='tomato_meter' ordinal='3' />
+                  <column datatype='integer' name='audience_score' ordinal='4' />
+                  <column datatype='integer' name='movie_duration' ordinal='5' />
+                  <column datatype='integer' name='production_budget' ordinal='6' />
+                  <column datatype='integer' name='opening_weekend' ordinal='7' />
+                  <column datatype='integer' name='domestic_box_office' ordinal='8' />
+                  <column datatype='integer' name='worldwide_box_office' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mcu_box_office' name='federated.00pf23511qzf3e14x341b0v6p5rv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00pf23511qzf3e14x341b0v6p5rv'>
+            <column caption='Movie Title' datatype='string' name='[movie_title]' role='dimension' type='nominal' />
+            <column-instance column='[movie_title]' derivation='None' name='[none:movie_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[worldwide_box_office]' derivation='Sum' name='[sum:worldwide_box_office:qk]' pivot='key' type='quantitative' />
+            <column caption='Worldwide Box Office' datatype='integer' name='[worldwide_box_office]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.00pf23511qzf3e14x341b0v6p5rv].[none:movie_title:nk]</rows>
+        <cols>[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:worldwide_box_office:qk]</cols>
+      </table>
+      <simple-id uuid='{683121FF-F96B-4DB3-9591-B7871941418E}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mcu_box_office' name='federated.00pf23511qzf3e14x341b0v6p5rv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00pf23511qzf3e14x341b0v6p5rv'>
+            <column caption='Domestic Box Office' datatype='integer' name='[domestic_box_office]' role='measure' type='quantitative' />
+            <column caption='Movie Title' datatype='string' name='[movie_title]' role='dimension' type='nominal' />
+            <column-instance column='[movie_title]' derivation='None' name='[none:movie_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[domestic_box_office]' derivation='Sum' name='[sum:domestic_box_office:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[worldwide_box_office]' derivation='Sum' name='[sum:worldwide_box_office:qk]' pivot='key' type='quantitative' />
+            <column caption='Worldwide Box Office' datatype='integer' name='[worldwide_box_office]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00pf23511qzf3e14x341b0v6p5rv].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:worldwide_box_office:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:domestic_box_office:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.00pf23511qzf3e14x341b0v6p5rv].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:worldwide_box_office:qk]&quot;</bucket>
+              <bucket>&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:domestic_box_office:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.00pf23511qzf3e14x341b0v6p5rv].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:domestic_box_office:qk]' palette='red_gold_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00pf23511qzf3e14x341b0v6p5rv].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.00pf23511qzf3e14x341b0v6p5rv].[Multiple Values]</rows>
+        <cols>[federated.00pf23511qzf3e14x341b0v6p5rv].[none:movie_title:nk]</cols>
+      </table>
+      <simple-id uuid='{0BBB8522-544E-4A3F-80D4-A0EBA444284C}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mcu_box_office' name='federated.00pf23511qzf3e14x341b0v6p5rv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00pf23511qzf3e14x341b0v6p5rv'>
+            <column caption='Audience Score' datatype='integer' name='[audience_score]' role='measure' type='quantitative' />
+            <column caption='Mcu Phase' datatype='string' default-role='measure' default-type='quantitative' name='[mcu_phase]' role='dimension' type='nominal' />
+            <column-instance column='[mcu_phase]' derivation='None' name='[none:mcu_phase:nk]' pivot='key' type='nominal' />
+            <column-instance column='[audience_score]' derivation='Sum' name='[sum:audience_score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mcu_phase]' derivation='Sum' name='[sum:mcu_phase:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00pf23511qzf3e14x341b0v6p5rv].[:Measure Names]'>
+            <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:mcu_phase:qk]&quot;' user:op='manual' />
+          </filter>
+          <slices>
+            <column>[federated.00pf23511qzf3e14x341b0v6p5rv].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.00pf23511qzf3e14x341b0v6p5rv].[none:mcu_phase:nk]' />
+              <size column='[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:audience_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{49FC2697-921A-4519-9A66-EFA26F757BB1}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mcu_box_office' name='federated.00pf23511qzf3e14x341b0v6p5rv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00pf23511qzf3e14x341b0v6p5rv'>
+            <column caption='Mcu Phase' datatype='string' default-role='measure' default-type='quantitative' name='[mcu_phase]' role='dimension' type='nominal' />
+            <column-instance column='[mcu_phase]' derivation='None' name='[none:mcu_phase:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tomato_meter]' derivation='Sum' name='[sum:tomato_meter:qk]' pivot='key' type='quantitative' />
+            <column caption='Tomato Meter' datatype='integer' name='[tomato_meter]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:tomato_meter:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:tomato_meter:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.00pf23511qzf3e14x341b0v6p5rv].[none:mcu_phase:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.00pf23511qzf3e14x341b0v6p5rv].[sum:tomato_meter:qk] + [federated.00pf23511qzf3e14x341b0v6p5rv].[sum:tomato_meter:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{0FBCBEE4-7558-4CCC-811A-AFFCA13074AE}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='37'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{570FA0FD-3BD6-4ED9-9A4F-6B387C25F12C}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00pf23511qzf3e14x341b0v6p5rv].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2E892F81-01CC-4AC6-8368-B7AF48EC096F}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.00pf23511qzf3e14x341b0v6p5rv].[none:mcu_phase:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00pf23511qzf3e14x341b0v6p5rv].[sum:audience_score:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{0205680D-5DE7-45FF-9323-FDF487EC3A55}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.00pf23511qzf3e14x341b0v6p5rv].[none:mcu_phase:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C4DBAE89-43F1-4A9C-8CC4-66E54165E89A}' />
+    </window>
+  </windows>
+</workbook>
