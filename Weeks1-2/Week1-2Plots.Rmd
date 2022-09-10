@@ -15,19 +15,12 @@ library(dplyr)
 library(lessR)
 
 
-#install.packages('dplyr')
 
-#sessionInfo()
 
 #.libPaths(new = "C:/Users/cast6/OneDrive/Documents/R/win-library/4.0")
 
-install.packages('lessR',dependencies = TRUE, repos='http://cran.rstudio.com/')
+#install.packages('lessR',dependencies = TRUE, repos='http://cran.rstudio.com/')
 
-#setwd("C:/DataScience_DSC_640/Weeks1-2/ex1-2/")
-
-#getwd()
-
-#setwd("/DataScience_DSC_640/Weeks1-2/ex1-2/")
 
 
 car_sales_df <- read_csv("car-sales.csv")
@@ -38,7 +31,7 @@ df.car_sales <- as.data.frame(car_sales_df)
 ```
 ```{r}
 
-ggplot(data=df.car_sales, aes(x=Make, y =Odometer)) + geom_bar(stat="identity") + ggtitle("Odometer Mileage By Make")
+ggplot(data=df.car_sales, aes(x=Make, y =Odometer)) + geom_bar(stat="identity") + ggtitle("Make of Vehicles Sold according to Odometer Mileage")
 
 ```
 
@@ -49,20 +42,23 @@ ggplot(data=df.car_sales, aes(x=Make, y =Odometer)) + geom_bar(stat="identity") 
 
 t <-table(df.car_sales$Colour)
 
-
+# Getting color and converting into a number to be able to do math
 r_names <- row.names(t)
 tab_values <- as.numeric(t)
 
 s_color_amount_df =  as.data.frame(cbind(Colors =r_names , Car_Amount = tab_values ))
 
+s_color_amount_df <- transform(s_color_amount_df , Car_Amount = as.numeric(Car_Amount))
 
 
+s_color_amount_df$fraction <- s_color_amount_df$Car_Amount / sum(s_color_amount_df$Car_Amount) 
 
+s_color_amount_df
 ggplot(s_color_amount_df, aes(x="" , y=Car_Amount, fill = Colors)) +
-  scale_fill_manual(values=c("#1F211E", "#0014FB","#1A8719","#9E0000","#FFFFFF" ))+
-  ggtitle("Car Colors Sold")+
+  scale_fill_manual(values=c("#454545", "#528AAE","#1A8719","#9E0000","#FFFFFF" ))+
+  ggtitle("Percentage Of Cars Sold By Color")+
   geom_col(color = "black") + 
-  geom_label(aes(label = Car_Amount),
+  geom_label(aes(label = percent(fraction)),
              position = position_stack(vjust = 0.5),
              show.legend = FALSE) +
   coord_polar("y")
@@ -70,6 +66,8 @@ ggplot(s_color_amount_df, aes(x="" , y=Car_Amount, fill = Colors)) +
 ```
 
 ```{r}
+
+# Getting color and converting into a number to be able to do math
 
 t_cars_type = table(df.car_sales$Make)
 
@@ -91,8 +89,7 @@ car_type_num_df$fraction <- car_type_num_df$Car_Amount / sum(car_type_num_df$Car
     
 
 PieChart(Make,  y=Car_Amount, data = car_type_num_df, fill = "viridis",
-         main = "Percentage of Cars Sold By Make", quiet=TRUE , add=c("rect", "Make of Car Sold"),
-                     x1=c(-.5,0), y1=c(-.2, 0), x2=.5, y2=.2) 
+         main = "Percentage of Cars Sold By Make", quiet=TRUE)
 ```
 
 
@@ -101,7 +98,7 @@ car_sales_df <- read_csv("car-sales.csv")
 
 ggplot(data = car_sales_df, aes(x = Make, y = Odometer, fill = Colour)) + 
 geom_bar(stat="identity")+
-ggtitle("Car Odometer Reading Sold By Color")+
+ggtitle("Vehicles Sold by Odometer Reading and Color")+
 scale_fill_manual(values=c("#1F211E", "#0014FB","#1A8719","#9E0000","#C3CDBE"))
 ```
 
