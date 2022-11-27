@@ -1,0 +1,68 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+
+library(tidyverse)
+library(magrittr)
+library(ggplot2)
+library(readxl)
+library(plyr)
+library(scales)
+library(webr)
+library(dplyr)
+library(treemap)
+library(areaplot)
+#library(lessR)
+
+install.packages('areaplot',dependencies = TRUE, repos='http://cran.rstudio.com/')
+
+
+un_employment_df = read_csv("unemployement-rate-1948-2010.csv")
+
+
+```
+
+```{r}
+
+
+
+treemap(un_employment_df, #Your data frame object
+        index=c("Year"),
+        vSize = "Value",
+        title="Unemployment Rate by Year",)
+
+
+
+```
+```{r}
+
+
+ggplot(un_employment_df, aes(x=Year, y=Value, fill=Period)) + geom_area()+ ggtitle("Periods of Unemployment By Year") + labs(x = "Year", y = "Frequency")
+```
+
+
+
+
+
+
+```{r}
+
+
+p <- ggplot(un_employment_df, aes(x=Value))
+# Basic area plot
+p + geom_area(stat = "bin", fill='blue') + ggtitle("Percentage Frequency of Unemployment") + labs(x = "Unemployment Rate", y = "Frequency")
+ 
+
+
+```
+
+
+
+
+
+
+

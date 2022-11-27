@@ -1,0 +1,1014 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0624.2136                               -->
+<workbook original-version='18.1' source-build='2022.2.0 (20222.22.0624.2136)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='statistic_id232513_net-profit-of-airlines-worldwide-2006-2022' inline='true' name='federated.09g1m5115r8g6u1a8udg1000y3dh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='statistic_id232513_net-profit-of-airlines-worldwide-2006-2022' name='excel-direct.07po9ho1ldvpj91dp94q50wicitu'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/DataScience_DSC_640/MileStone/Data/statistic_id232513_net-profit-of-airlines-worldwide-2006-2022.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.07po9ho1ldvpj91dp94q50wicitu' name='Data' table='[Data$]' type='table'>
+          <columns gridOrigin='A1:B19:no:A1:B19:0' header='yes' outcome='2'>
+            <column datatype='string' name='Year' ordinal='0' />
+            <column datatype='real' name='Revene' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.07po9ho1ldvpj91dp94q50wicitu' name='Data' table='[Data$]' type='table'>
+          <columns gridOrigin='A1:B19:no:A1:B19:0' header='yes' outcome='2'>
+            <column datatype='string' name='Year' ordinal='0' />
+            <column datatype='real' name='Revene' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Data]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B19:no:A1:B19:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_47E657A5445248A780A1A3396937DF50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Revene</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Revene]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>Revene</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_47E657A5445248A780A1A3396937DF50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Year (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Year]' default='&quot;Positive Revenue&quot;' new-bin='true'>
+          <bin default-name='false' value='&quot;Negative Revenue&quot;'>
+            <value>&quot;2008&quot;</value>
+            <value>&quot;2009&quot;</value>
+            <value>&quot;2020 post-COVID&quot;</value>
+            <value>&quot;2021&quot;</value>
+            <value>&quot;2022**&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Data' datatype='table' name='[__tableau_internal_object_id__].[Data_47E657A5445248A780A1A3396937DF50]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Year (group)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Positive Revenue&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Negative Revenue&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Data' id='Data_47E657A5445248A780A1A3396937DF50'>
+            <properties context=''>
+              <relation connection='excel-direct.07po9ho1ldvpj91dp94q50wicitu' name='Data' table='[Data$]' type='table'>
+                <columns gridOrigin='A1:B19:no:A1:B19:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Year' ordinal='0' />
+                  <column datatype='real' name='Revene' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030' inline='true' name='federated.1es1f030dr70nj18u083o1xqi22d' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030' name='textscan.1ev1qyd1pxahql12ne0if0s1j2c5'>
+            <connection class='textscan' directory='C:/DataScience_DSC_640/MileStone/Data' filename='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1ev1qyd1pxahql12ne0if0s1j2c5' name='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv' table='[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='real' name='Passenger road vehicles' ordinal='1' />
+            <column datatype='real' name='Aviation' ordinal='2' />
+            <column datatype='real' name='Road freight vehicles' ordinal='3' />
+            <column datatype='real' name='Rail' ordinal='4' />
+            <column datatype='real' name='Shipping' ordinal='5' />
+            <column datatype='real' name='Other' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1ev1qyd1pxahql12ne0if0s1j2c5' name='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv' table='[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='real' name='Passenger road vehicles' ordinal='1' />
+            <column datatype='real' name='Aviation' ordinal='2' />
+            <column datatype='real' name='Road freight vehicles' ordinal='3' />
+            <column datatype='real' name='Rail' ordinal='4' />
+            <column datatype='real' name='Shipping' ordinal='5' />
+            <column datatype='real' name='Other' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv_97E8E5B4407A4CEB9147B08AF63E059A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Passenger road vehicles</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Passenger road vehicles]</local-name>
+            <parent-name>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv]</parent-name>
+            <remote-alias>Passenger road vehicles</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv_97E8E5B4407A4CEB9147B08AF63E059A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aviation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Aviation]</local-name>
+            <parent-name>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv]</parent-name>
+            <remote-alias>Aviation</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv_97E8E5B4407A4CEB9147B08AF63E059A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Road freight vehicles</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Road freight vehicles]</local-name>
+            <parent-name>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv]</parent-name>
+            <remote-alias>Road freight vehicles</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv_97E8E5B4407A4CEB9147B08AF63E059A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rail</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rail]</local-name>
+            <parent-name>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv]</parent-name>
+            <remote-alias>Rail</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv_97E8E5B4407A4CEB9147B08AF63E059A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shipping</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Shipping]</local-name>
+            <parent-name>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv]</parent-name>
+            <remote-alias>Shipping</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv_97E8E5B4407A4CEB9147B08AF63E059A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Other</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Other]</local-name>
+            <parent-name>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv]</parent-name>
+            <remote-alias>Other</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv_97E8E5B4407A4CEB9147B08AF63E059A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Aviation]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Other]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Passenger road vehicles]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Rail]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Road freight vehicles]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Shipping]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv' datatype='table' name='[__tableau_internal_object_id__].[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv_97E8E5B4407A4CEB9147B08AF63E059A]' role='measure' type='quantitative' />
+      <column-instance column='[Aviation]' derivation='Sum' name='[sum:Aviation:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Other]' derivation='Sum' name='[sum:Other:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Passenger road vehicles]' derivation='Sum' name='[sum:Passenger road vehicles:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Rail]' derivation='Sum' name='[sum:Rail:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Road freight vehicles]' derivation='Sum' name='[sum:Road freight vehicles:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Shipping]' derivation='Sum' name='[sum:Shipping:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Other:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Passenger road vehicles:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Road freight vehicles:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Shipping:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Aviation:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Rail:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv' id='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv_97E8E5B4407A4CEB9147B08AF63E059A'>
+            <properties context=''>
+              <relation connection='textscan.1ev1qyd1pxahql12ne0if0s1j2c5' name='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030.csv' table='[transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='real' name='Passenger road vehicles' ordinal='1' />
+                  <column datatype='real' name='Aviation' ordinal='2' />
+                  <column datatype='real' name='Road freight vehicles' ordinal='3' />
+                  <column datatype='real' name='Rail' ordinal='4' />
+                  <column datatype='real' name='Shipping' ordinal='5' />
+                  <column datatype='real' name='Other' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='carbon-footprint-travel-mode' inline='true' name='federated.0yndxzk1gbe5nj15zqrhy0j5iwtj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='carbon-footprint-travel-mode' name='textscan.0lwtcr505ink9e1a4g1ye1k9t6wj'>
+            <connection class='textscan' directory='C:/DataScience_DSC_640/MileStone/Data' filename='carbon-footprint-travel-mode.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0lwtcr505ink9e1a4g1ye1k9t6wj' name='carbon-footprint-travel-mode.csv' table='[carbon-footprint-travel-mode#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Entity' ordinal='0' />
+            <column datatype='string' name='Code' ordinal='1' />
+            <column datatype='integer' name='Year' ordinal='2' />
+            <column datatype='real' name='GHG emissions (gCO2e/km)' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0lwtcr505ink9e1a4g1ye1k9t6wj' name='carbon-footprint-travel-mode.csv' table='[carbon-footprint-travel-mode#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Entity' ordinal='0' />
+            <column datatype='string' name='Code' ordinal='1' />
+            <column datatype='integer' name='Year' ordinal='2' />
+            <column datatype='real' name='GHG emissions (gCO2e/km)' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[carbon-footprint-travel-mode.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Entity]</local-name>
+            <parent-name>[carbon-footprint-travel-mode.csv]</parent-name>
+            <remote-alias>Entity</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[carbon-footprint-travel-mode.csv_20A8E7FD3B234D3F83AAAA7317DC0D32]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Code]</local-name>
+            <parent-name>[carbon-footprint-travel-mode.csv]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[carbon-footprint-travel-mode.csv_20A8E7FD3B234D3F83AAAA7317DC0D32]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[carbon-footprint-travel-mode.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[carbon-footprint-travel-mode.csv_20A8E7FD3B234D3F83AAAA7317DC0D32]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GHG emissions (gCO2e/km)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GHG emissions (gCO2e/km)]</local-name>
+            <parent-name>[carbon-footprint-travel-mode.csv]</parent-name>
+            <remote-alias>GHG emissions (gCO2e/km)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[carbon-footprint-travel-mode.csv_20A8E7FD3B234D3F83AAAA7317DC0D32]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Entity (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Entity]' default='&quot;Other&quot;' new-bin='true'>
+          <bin default-name='false' value='&quot;Airlines&quot;'>
+            <value>&quot;Domestic flight&quot;</value>
+            <value>&quot;Long-haul flight (business class)&quot;</value>
+            <value>&quot;Long-haul flight (economy)&quot;</value>
+            <value>&quot;Long-haul flight (economy+)&quot;</value>
+            <value>&quot;Long-haul flight (first class)&quot;</value>
+            <value>&quot;Short-haul flight (business class)&quot;</value>
+            <value>&quot;Short-haul flight (economy)&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Trains&quot;'>
+            <value>&quot;Eurostar (international rail)&quot;</value>
+            <value>&quot;Light rail and tram&quot;</value>
+            <value>&quot;National rail&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Entity1' datatype='string' name='[Entity]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='carbon-footprint-travel-mode.csv' datatype='table' name='[__tableau_internal_object_id__].[carbon-footprint-travel-mode.csv_20A8E7FD3B234D3F83AAAA7317DC0D32]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Entity (group)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Airlines&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Trains&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='carbon-footprint-travel-mode.csv' id='carbon-footprint-travel-mode.csv_20A8E7FD3B234D3F83AAAA7317DC0D32'>
+            <properties context=''>
+              <relation connection='textscan.0lwtcr505ink9e1a4g1ye1k9t6wj' name='carbon-footprint-travel-mode.csv' table='[carbon-footprint-travel-mode#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Entity' ordinal='0' />
+                  <column datatype='string' name='Code' ordinal='1' />
+                  <column datatype='integer' name='Year' ordinal='2' />
+                  <column datatype='real' name='GHG emissions (gCO2e/km)' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Sheet1 (reductionPlanAirlines)' inline='true' name='federated.067ixpf1w3rulc139wncd1yl22go' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='reductionPlanAirlines' name='excel-direct.0dfpujr0kg4s541gwgj850tq3l4p'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/DataScience_DSC_640/MileStone/Data/reductionPlanAirlines.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0dfpujr0kg4s541gwgj850tq3l4p' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:G46:no:A1:G46:0' header='yes' outcome='2'>
+            <column datatype='date' name='Trace 0' ordinal='0' />
+            <column datatype='real' name='Tract 0, y' ordinal='1' />
+            <column datatype='real' name='Trace_all' ordinal='2' />
+            <column datatype='real' name='tract 1, y' ordinal='3' />
+            <column datatype='real' name='Trace 2,y' ordinal='4' />
+            <column datatype='real' name='Tract 3, y' ordinal='5' />
+            <column datatype='real' name='Trace 4, y' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.0dfpujr0kg4s541gwgj850tq3l4p' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:G46:no:A1:G46:0' header='yes' outcome='2'>
+            <column datatype='date' name='Trace 0' ordinal='0' />
+            <column datatype='real' name='Tract 0, y' ordinal='1' />
+            <column datatype='real' name='Trace_all' ordinal='2' />
+            <column datatype='real' name='tract 1, y' ordinal='3' />
+            <column datatype='real' name='Trace 2,y' ordinal='4' />
+            <column datatype='real' name='Tract 3, y' ordinal='5' />
+            <column datatype='real' name='Trace 4, y' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Trace 0</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Trace 0]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Trace 0</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tract 0, y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Tract 0, y]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Tract 0, y</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Trace_all</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Trace_all]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Trace_all</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tract 1, y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tract 1, y]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>tract 1, y</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Trace 2,y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Trace 2,y]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Trace 2,y</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tract 3, y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Tract 3, y]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Tract 3, y</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Trace 4, y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Trace 4, y]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Trace 4, y</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G46:no:A1:G46:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Trace all' datatype='real' name='[Trace_all]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_EF287F26452E46EEAA43899D0D4740E2]' role='measure' type='quantitative' />
+      <column caption='Tract 1, Y' datatype='real' name='[tract 1, y]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_EF287F26452E46EEAA43899D0D4740E2'>
+            <properties context=''>
+              <relation connection='excel-direct.0dfpujr0kg4s541gwgj850tq3l4p' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:G46:no:A1:G46:0' header='yes' outcome='2'>
+                  <column datatype='date' name='Trace 0' ordinal='0' />
+                  <column datatype='real' name='Tract 0, y' ordinal='1' />
+                  <column datatype='real' name='Trace_all' ordinal='2' />
+                  <column datatype='real' name='tract 1, y' ordinal='3' />
+                  <column datatype='real' name='Trace 2,y' ordinal='4' />
+                  <column datatype='real' name='Tract 3, y' ordinal='5' />
+                  <column datatype='real' name='Trace 4, y' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Carbon Emissions: Do Trains Produce Less Carbon Emissions Than Airlines?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='carbon-footprint-travel-mode' name='federated.0yndxzk1gbe5nj15zqrhy0j5iwtj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yndxzk1gbe5nj15zqrhy0j5iwtj'>
+            <column datatype='string' name='[Entity (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Entity]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='false' value='&quot;Airlines&quot;'>
+                  <value>&quot;Domestic flight&quot;</value>
+                  <value>&quot;Long-haul flight (business class)&quot;</value>
+                  <value>&quot;Long-haul flight (economy)&quot;</value>
+                  <value>&quot;Long-haul flight (economy+)&quot;</value>
+                  <value>&quot;Long-haul flight (first class)&quot;</value>
+                  <value>&quot;Short-haul flight (business class)&quot;</value>
+                  <value>&quot;Short-haul flight (economy)&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Trains&quot;'>
+                  <value>&quot;Eurostar (international rail)&quot;</value>
+                  <value>&quot;Light rail and tram&quot;</value>
+                  <value>&quot;National rail&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Entity1' datatype='string' name='[Entity]' role='dimension' type='nominal' />
+            <column datatype='real' name='[GHG emissions (gCO2e/km)]' role='measure' type='quantitative' />
+            <column-instance column='[Entity]' derivation='None' name='[none:Entity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[GHG emissions (gCO2e/km)]' derivation='Sum' name='[sum:GHG emissions (gCO2e/km):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0yndxzk1gbe5nj15zqrhy0j5iwtj].[none:Entity:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0yndxzk1gbe5nj15zqrhy0j5iwtj].[sum:GHG emissions (gCO2e/km):qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0yndxzk1gbe5nj15zqrhy0j5iwtj].[sum:GHG emissions (gCO2e/km):qk]' scope='rows' value='Carbon Emissions ' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0yndxzk1gbe5nj15zqrhy0j5iwtj].[Entity (group)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0yndxzk1gbe5nj15zqrhy0j5iwtj].[sum:GHG emissions (gCO2e/km):qk]</rows>
+        <cols>[federated.0yndxzk1gbe5nj15zqrhy0j5iwtj].[none:Entity:nk]</cols>
+      </table>
+      <simple-id uuid='{F416262F-960E-40FA-B8F2-AC54B2788549}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Transportation Yearly Carbon Emissions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030' name='federated.1es1f030dr70nj18u083o1xqi22d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1es1f030dr70nj18u083o1xqi22d'>
+            <column datatype='real' name='[Aviation]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Other]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Passenger road vehicles]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Rail]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Road freight vehicles]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Shipping]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Aviation]' derivation='Sum' name='[sum:Aviation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Other]' derivation='Sum' name='[sum:Other:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Passenger road vehicles]' derivation='Sum' name='[sum:Passenger road vehicles:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Rail]' derivation='Sum' name='[sum:Rail:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Road freight vehicles]' derivation='Sum' name='[sum:Road freight vehicles:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Shipping]' derivation='Sum' name='[sum:Shipping:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1es1f030dr70nj18u083o1xqi22d].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Aviation:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Other:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Passenger road vehicles:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Rail:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Road freight vehicles:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1es1f030dr70nj18u083o1xqi22d].[sum:Shipping:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1es1f030dr70nj18u083o1xqi22d].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1es1f030dr70nj18u083o1xqi22d].[none:Year:qk]' field-type='quantitative' max='2031' min='1997' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1es1f030dr70nj18u083o1xqi22d].[Multiple Values]' field-type='quantitative' max='3.8360562660509001' min='-0.014601278676626262' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1es1f030dr70nj18u083o1xqi22d].[Multiple Values]' scope='rows' value='Carbon Emissions' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1es1f030dr70nj18u083o1xqi22d].[:Measure Names]' />
+              <text column='[federated.1es1f030dr70nj18u083o1xqi22d].[:Measure Names]' />
+              <lod column='[federated.1es1f030dr70nj18u083o1xqi22d].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1es1f030dr70nj18u083o1xqi22d].[Multiple Values]</rows>
+        <cols>[federated.1es1f030dr70nj18u083o1xqi22d].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{2B118289-3590-4273-93B6-2AF5E386C05B}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Net Profit of Commercial Airlines Worldwide 2006 - 2022</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='statistic_id232513_net-profit-of-airlines-worldwide-2006-2022' name='federated.09g1m5115r8g6u1a8udg1000y3dh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09g1m5115r8g6u1a8udg1000y3dh'>
+            <column datatype='real' name='[Revene]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Year]' default='&quot;Positive Revenue&quot;' new-bin='true'>
+                <bin default-name='false' value='&quot;Negative Revenue&quot;'>
+                  <value>&quot;2008&quot;</value>
+                  <value>&quot;2009&quot;</value>
+                  <value>&quot;2020 post-COVID&quot;</value>
+                  <value>&quot;2021&quot;</value>
+                  <value>&quot;2022**&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Revene]' derivation='Sum' name='[sum:Revene:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.09g1m5115r8g6u1a8udg1000y3dh].[none:Year:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;2006&quot;</bucket>
+              <bucket>&quot;2007&quot;</bucket>
+              <bucket>&quot;2008&quot;</bucket>
+              <bucket>&quot;2009&quot;</bucket>
+              <bucket>&quot;2010&quot;</bucket>
+              <bucket>&quot;2011&quot;</bucket>
+              <bucket>&quot;2012&quot;</bucket>
+              <bucket>&quot;2013&quot;</bucket>
+              <bucket>&quot;2014&quot;</bucket>
+              <bucket>&quot;2015&quot;</bucket>
+              <bucket>&quot;2016&quot;</bucket>
+              <bucket>&quot;2017&quot;</bucket>
+              <bucket>&quot;2018&quot;</bucket>
+              <bucket>&quot;2019&quot;</bucket>
+              <bucket>&quot;2020 pre-COVID* **&quot;</bucket>
+              <bucket>&quot;2020 post-COVID&quot;</bucket>
+              <bucket>&quot;2021&quot;</bucket>
+              <bucket>&quot;2022**&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.09g1m5115r8g6u1a8udg1000y3dh].[sum:Revene:qk]' scope='cols' value='Revenue In Billion U.S. Dollars' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.09g1m5115r8g6u1a8udg1000y3dh].[none:Year:nk]' value='56' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.09g1m5115r8g6u1a8udg1000y3dh].[sum:Revene:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.09g1m5115r8g6u1a8udg1000y3dh].[Year (group)]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.09g1m5115r8g6u1a8udg1000y3dh].[none:Year:nk]</rows>
+        <cols>[federated.09g1m5115r8g6u1a8udg1000y3dh].[sum:Revene:qk]</cols>
+      </table>
+      <simple-id uuid='{424B580F-99BB-4952-BC0E-019F7D38705A}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6665BE21-A45F-400F-ABA4-D21AF945F54B}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='115'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='105'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.0yndxzk1gbe5nj15zqrhy0j5iwtj].[Entity (group)]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='20'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{54E804C2-F1FC-4C7A-B298-F65D0B7DE395}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='52'>
+            <card type='rows' />
+          </strip>
+          <strip size='24'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D237E28D-642C-4631-A89D-95B43D268764}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='105'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.09g1m5115r8g6u1a8udg1000y3dh].[Year (group)]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='20'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E84E49EF-6976-4799-BE3C-B626113D07FF}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6F1238FA-9ADA-4014-A8EB-F7E916CDA58D}' />
+    </window>
+  </windows>
+</workbook>

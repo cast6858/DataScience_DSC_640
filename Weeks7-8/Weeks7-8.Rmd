@@ -1,0 +1,79 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+```{r}
+
+library(tidyverse)
+library(magrittr)
+library(ggplot2)
+library(readxl)
+library(plyr)
+library(scales)
+library(webr)
+library(dplyr)
+library(treemap)
+library(areaplot)
+```
+
+
+```{r}
+
+boat_sales <- read_csv("Boat_Sales.csv")
+
+boat_sales
+
+```
+
+
+```{r}
+
+df1  <- filter(boat_sales ,  boat_sales$`Year Built` > 0 )
+
+
+plot(df1$Length, df1$EUR_price,  main="", xlab="Length", ylab="Price In Euros", title("Price of Boats Sold by Length"), col="blue")
+
+
+
+
+
+```
+
+```{r}
+
+df1  <- filter(boat_sales ,  boat_sales$`Year Built` > 2000 )
+
+
+ggplot(df1, aes(x=Length, y=Width, size=df1$`Number of views last 7 days`,color=Country )) +
+  geom_point(alpha=0.5) +
+  scale_size(range=c(2, 10), name='Viewed Boats') + ggtitle("Boat Sizes Viewed By Countries After Year 2000")
+
+
+
+
+```
+
+
+```{r}
+
+
+colramp = colorRampPalette(c('white', 'blue', 'green', 'yellow', 'red'))
+smoothScatter(df1$Length, df1$Width, colramp=colramp
+              ,xlab = "Boat Length", 
+              ylab = "Boat Width",
+              main="Boat Sizes Sold in Europe")
+
+
+```
+
+
+
+
+
+
+
+
+

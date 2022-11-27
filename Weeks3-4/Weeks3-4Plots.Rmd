@@ -1,0 +1,53 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(magrittr)
+library(ggplot2)
+library(readxl)
+library(plyr)
+library(scales)
+library(webr)
+library(dplyr)
+#library(lessR)
+
+
+
+esports_audience_df <- read.csv("esports_revenue_audience.csv")
+
+```
+
+```{r include=FALSE}
+
+#1esports_audience_df
+
+plot(esports_audience_df$Year, 
+     esports_audience_df$Estimated.e.sports.market.revenue.in.million.dollars, 
+     type = "l",
+     main="E-sports Yearly Market Revenue",
+     xlab = "Year",
+     ylab="Revenue In Millions",
+     col="red")  
+
+```
+
+
+```{r include=FALSE}
+
+plot(esports_audience_df$Year, 
+     esports_audience_df$Frequent.viewers.in.million, 
+     type = "s",
+     main="E-sports Frequent Viewers by Year",
+     xlab = "Year",
+     ylab="Viewers In Millions",
+     col="blue")  
+
+
+```
+
+

@@ -1,0 +1,118 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r include=FALSE}
+
+library(tidyverse)
+library(magrittr)
+library(ggplot2)
+library(readxl)
+library(plyr)
+library(scales)
+library(webr)
+library(dplyr)
+library(sp)
+library(rgdal)
+library(data.table)
+library(plotly)
+library(treemap)
+#library(lessR)
+
+
+
+
+geo_loc_df   <- read_csv("costcos-geocoded.csv")
+#geo_loc_df 
+
+basket_ball_df <- read_csv("ppg2008.csv")
+
+
+
+geo_table = fread("costcos-geocoded.csv")
+
+geo_table = as.data.table(geo_table)
+
+#install.packages('plotly',dependencies = TRUE, repos='http://cran.rstudio.com/')
+
+```
+
+
+
+
+``` {r include=False}
+
+df1 <- filter(basket_ball_df ,  as.double(basket_ball_df$MIN)> 35)
+
+
+row.names(df1) <- df1$Name
+
+
+
+df_matrix <- data.matrix(df1)
+
+
+nba_heatmap <- heatmap(df_matrix, Rowv=NA, Colv=NA, 
+                      col = cm.colors(220), scale="column", margins=c(8,10),
+                       main = "NBA Players That Play Over 35 minutes a Game")
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+``` {r include=False}
+
+points_df  <- filter(basket_ball_df ,  as.double(basket_ball_df$PTS)> 25)
+
+ggplot(basket_ball_df, aes(x=G, y=PTS, fill = 'red' )) + geom_violin()
+
+#ggplot()
+
+
+
+
+
+
+```
+
+```{r}
+
+
+
+ggplot(geo_table, aes( Longitude, Latitude)) +
+  geom_density_2d() + ggtitle("Contour Map of Costco Stores In Alabama")
+
+
+```
+
+
+
+``` {r include=False}
+
+df2 <- filter(geo_table, State == 'Texas')
+
+
+coordinates(df2) <- ~Longitude + Latitude
+
+crs.geo1 = CRS("+proj=longlat")
+
+proj4string(df2) = crs.geo1
+
+#plot(df2,pch = 20, col = "steelblue")
+
+#looking up shape file for texas
+texas_map = readOGR(dsn = "./tl_2016_48_cousub", layer = "tl_2016_48_cousub")
+
+plot(texas_map , main = "Costco Locations In Texas")
+points(df2,pch = 20, col = "red")
+```

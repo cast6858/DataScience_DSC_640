@@ -29,7 +29,7 @@ df.car_sales <- as.data.frame(car_sales_df)
 #view(df.car_sales)
 
 ```
-```{r}
+```{r }
 
 ggplot(data=df.car_sales, aes(x=Make, y =Odometer)) + geom_bar(stat="identity") + ggtitle("Make of Vehicles Sold according to Odometer Mileage")
 
@@ -38,7 +38,7 @@ ggplot(data=df.car_sales, aes(x=Make, y =Odometer)) + geom_bar(stat="identity") 
 
 
 
-``` {r}
+``` {r }
 
 t <-table(df.car_sales$Colour)
 
@@ -65,7 +65,7 @@ ggplot(s_color_amount_df, aes(x="" , y=Car_Amount, fill = Colors)) +
 
 ```
 
-```{r}
+```{r }
 
 # Getting color and converting into a number to be able to do math
 
@@ -93,7 +93,7 @@ PieChart(Make,  y=Car_Amount, data = car_type_num_df, fill = "viridis",
 ```
 
 
-```{r}
+```{r }
 car_sales_df <- read_csv("car-sales.csv")
 
 ggplot(data = car_sales_df, aes(x = Make, y = Odometer, fill = Colour)) + 
